@@ -188,7 +188,9 @@ export default function Navigation() {
               <div className="flex items-center space-x-3">
                 <div className="flex items-center space-x-2 px-4 py-2 bg-white/60 rounded-lg shadow-sm border border-sky-200/50">
                   <User className="h-4 w-4 text-sky-600" />
-                  <span className="text-sm text-gray-700 font-medium">Welcome, {user.name}</span>
+                 {user && (
+  <span className="text-sm text-gray-700 font-medium">Welcome, {user.name}</span>
+)}
                 </div>
                 <Button
                   variant="ghost"
@@ -302,7 +304,9 @@ export default function Navigation() {
               ) : (
                 <div className="space-y-1">
                   <div className="px-4 py-3 text-base font-semibold text-gray-700 bg-white/60 rounded-lg mx-2 shadow-sm">
-                    Welcome, {user.name}
+                   {user && (
+  <span className="text-sm text-gray-700 font-medium">Welcome, {user.name}</span>
+)}
                   </div>
                   <button
                     onClick={() => {
